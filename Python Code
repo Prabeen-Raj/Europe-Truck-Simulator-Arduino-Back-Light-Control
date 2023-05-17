@@ -1,0 +1,14 @@
+import serial                                 
+import keyboard
+
+Arduino_Serial = serial.Serial('COM7')
+
+while True:
+    if keyboard.is_pressed("S"):
+        Arduino_Serial.write('H'.encode())
+
+    if keyboard.is_pressed("W"):
+        Arduino_Serial.write('L'.encode())    
+
+    
+
